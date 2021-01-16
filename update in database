@@ -1,0 +1,33 @@
+package net.codejava;
+import java.sql.*;
+public class database3
+{
+   public static void main(String[] args) throws Exception 
+	{
+	    String url="jdbc:mysql://localhost:3306/database2";
+	    String uname ="root";
+	    String pass ="Navalneeru@51";
+	    String query ="select name from student where id =101";
+		 Class.forName("com.mysql.cj.jdbc.Driver");
+		 // Connection is an interface so we can not create object so we used getConnection method
+		 Connection con = DriverManager.getConnection(url, uname, pass);
+		 Statement st = con.createStatement();
+		 ResultSet rs = st.executeQuery(query);
+		 rs.next();
+		 String name = rs.getString("name");
+		 System.out.println(name);
+		 
+		 
+		 // update statement 
+		 String sql = "UPDATE student SET id = 123 WHERE name=?";
+		 
+		 PreparedStatement statement = con.prepareStatement(sql);
+		 statement.setString(1, "x");
+		 
+		  
+		 int rowsUpdated = statement.executeUpdate();
+		 if (rowsUpdated > 0) {
+		     System.out.println("An existing user was updated successfully!");
+		 }
+	}
+}
