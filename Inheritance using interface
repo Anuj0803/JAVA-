@@ -1,0 +1,46 @@
+package net.codejava;
+import java.util.Scanner;
+interface div
+{
+	void print();
+}
+class Sum
+{
+	void add ()
+	{
+		System.out.println("enter values of a and b");
+		Scanner s= new Scanner(System.in);
+		int a = s.nextInt();
+		int b= s.nextInt();
+		int c= a+b;
+		System.out.println("value of c "+c);
+		s.close();
+	}
+}
+class Sum1 extends Sum
+{
+	 static void sub()
+	{
+		System.out.println("I am static");
+	}
+}
+class Sum2 implements div
+{
+	  public void print()
+	{
+		System.out.println("abc");
+	}
+}
+	
+public class hello 
+{
+
+	public static void main(String[] args) 
+	{
+		Sum1 f = new Sum1();
+		Sum2 p= new Sum2();
+		f.add();
+		p.print();
+		Sum1.sub();
+	}
+}
