@@ -1,0 +1,40 @@
+package net.codejava;
+import java.util.Scanner;
+class hello
+{
+	Scanner a = new Scanner(System.in);
+	int b = a.nextInt();
+void fun()
+{
+	switch(b)
+	{
+	     case 1:
+	   {
+		System.out.println("hello");
+		break;
+	   }
+	     case 2:
+	     {
+	    	 System.out.println("hi");
+	    	 break;
+	     }
+	     default:
+	     {
+	    	 System.out.println("bye");
+	     }
+	}
+}
+
+}
+public class come 
+{
+
+	public static void main(String[] args) 
+	{
+		System.out.println("enter value - ");
+	   hello h=new hello();
+	   h.fun();
+
+	}
+
+}
