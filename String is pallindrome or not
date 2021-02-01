@@ -1,0 +1,28 @@
+package practice;
+import java.util.*;
+public class hello1 
+{
+  
+	public static void main(String[] args)
+	{
+		int c=0,i;
+		System.out.println("enter a string");
+		Scanner sc = new Scanner(System.in);
+        String st = sc.nextLine();
+        int l = st.length();
+        for(i=0;i<l/2;i++)
+        {
+        	if(st.charAt(i)==st.charAt(l-i-1))
+        	c++;
+        }
+        if(c==i)
+    	{
+    		System.out.println("pallindrome");
+    	}
+    	else
+    		System.out.println("not");
+        	
+       
+        
+	}
+}
