@@ -1,0 +1,16 @@
+package practice;
+import java.util.*;
+public class hello1 
+{
+  
+	public static void main(String[] args)
+	{
+		System.out.println("enter a string");
+		Scanner sc = new Scanner(System.in);
+        StringBuilder st = new StringBuilder();
+        st.append(sc.nextLine());
+        st.reverse();
+        System.out.println(st);
+        
+	}
+}
