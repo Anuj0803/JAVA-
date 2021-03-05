@@ -1,0 +1,36 @@
+package practice;
+import java.io.*;
+
+import java.util.*;
+public class Solution {
+
+	public static void main(String []args)
+	  {
+		Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        int n1 = A.length();
+        int n2 = B.length();
+        int s =n1+n2;
+        System.out.println(s);
+        int x= A.compareTo(B);
+        if(x<0)
+        {
+            System.out.println("No");
+        }
+        else
+        	System.out.println("Yes");
+        String firstLetter = A.substring(0, 1);
+    String remainingLetters = A.substring(1, A.length());
+
+    firstLetter = firstLetter.toUpperCase();
+    A = firstLetter + remainingLetters;
+    String firstLetter1 = B.substring(0, 1);
+    String remainingLetters1 = B.substring(1, B.length());
+
+    firstLetter1 = firstLetter1.toUpperCase();
+    B= firstLetter1 + remainingLetters1;
+        String st =A.concat(" "+B);
+        System.out.println(st);
+	  }
+}
