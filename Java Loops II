@@ -1,0 +1,23 @@
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+         int a,b,n ;
+       Scanner sc = new Scanner(System.in);
+       int x = sc.nextInt();
+       for(int i=0;i<x;i++)
+       {
+           a=sc.nextInt();
+           b=sc.nextInt();
+           n=sc.nextInt();
+           int s=a;
+           for(int i1=0;i1<n;i1++)
+          {
+              s+=(int)(Math.pow(2, i1)*b);
+              System.out.print(s+" ");
+          }
+          System.out.println();
+       }
+    }
+}
